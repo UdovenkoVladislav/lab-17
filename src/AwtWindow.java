@@ -21,7 +21,7 @@ public class AwtWindow extends Frame {
         AwtWindow aw_win = new AwtWindow();
         aw_win.setSize(300, 200);
         aw_win.setTitle("AWT GUI");
-
+        TextArea ta = new TextArea("Текстовое поле");
         Button OK = new Button("Выйти");
         OK.addActionListener(new ActionListener() {
             @Override
@@ -30,6 +30,7 @@ public class AwtWindow extends Frame {
             }
         });
         Panel panel = new Panel();
+        panel.add(ta);
         panel.add(OK);
         aw_win.add(panel);
         aw_win.setVisible(true);
